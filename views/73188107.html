@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../resources/css/style.css">
 
 
-    <title>Contenido</title>
+    <title>PieroLive</title>
 
 
     <!--Inicio Estilos tipo Interno-->
@@ -254,8 +254,53 @@
             </div>
             <!--Fin Nueva Seccion-->
 
-            <script src="../resources/Bootstrap/jquery-3.5.1.slim.min.js"></script>
-            <script src="../resources/Bootstrap/bootstrap.bundle.min.js"></script>
+            <hr>
+
+            <!--Inicio Seccion Formulario-->
+            <div class="form textoCentrado">
+
+                <div>
+                    <label for="nombre">Nombres</label>
+                    <input id="nombre" type="text">
+                    <br>
+                    <label for="edad"> Edad</label>
+                    <input id="edad" type="number">
+                    <br>
+
+                </div>
+                <br>
+
+                <div>
+                    <button class="btn btn-sm btn-success" onclick="mostarAlert()"> Guardar</button>
+                </div>
+
+            </div>
+            <!--Fin Seccion Formulario-->
+
+        </div>
+
+
+
+
+
+        <script src="../resources/Bootstrap/jquery-3.5.1.slim.min.js"></script>
+        <script src="../resources/Bootstrap/bootstrap.bundle.min.js"></script>
+
+        <script>
+            /*Inicializar variables*/
+            var vNombre = '';
+            var vEdad = 0;
+
+            /*Estalecer variables*/
+            vNombre = 'Piero Portilla';
+            vNombre = '23';
+
+
+
+            function mostAlert() {
+                alert('Hola' + vNombre + 'tengo' + vEdad + 'años');
+            }
+        </script>
 
 </body>
 
