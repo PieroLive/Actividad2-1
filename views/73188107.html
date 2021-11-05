@@ -259,19 +259,27 @@
             <!--Inicio Seccion Formulario-->
             <div class="form textoCentrado">
 
+                <!--Inicio del formulario-->
                 <div>
-                    <label for="nombre">Nombres</label>
-                    <input id="nombre" type="text">
-                    <br>
-                    <label for="edad"> Edad</label>
-                    <input id="edad" type="number">
-                    <br>
+                    <form>
+                        <div class='form-group'>
+                            <label for='nombre'>Nombres</label>
+                            <input class='form-control' id='nombre' type='text'>
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='edad'>Edad</label>
+                            <input class='form-control' id='edad' type='text'>
+                        </div>
+                    </form>
 
                 </div>
+                <!--Fin del formiulario-->
+
                 <br>
 
                 <div>
-                    <button class="btn btn-sm btn-success" onclick="mostarAlert()"> Guardar</button>
+                    <button class="btn btn-sm btn-success" onclick="mostAlert()"> Guardar</button>
                 </div>
 
             </div>
@@ -279,30 +287,25 @@
 
         </div>
 
-
-
-
-
         <script src="../resources/Bootstrap/jquery-3.5.1.slim.min.js"></script>
         <script src="../resources/Bootstrap/bootstrap.bundle.min.js"></script>
 
-        <script>
-            /*Inicializar variables*/
-            var vNombre = '';
-            var vEdad = 0;
 
-            /*Estalecer variables*/
-            vNombre = 'Piero Portilla';
-            vNombre = '23';
-
-
-
-            function mostAlert() {
-                alert('Hola' + vNombre + 'tengo' + vEdad + 'años');
-            }
-        </script>
 
 </body>
+<!--Javascript Bundle with popper-->
+<!--MDB-->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mdo-ui-kit/3.6.0/mdb.min.js'></script>
+<script>
+    var vnombre = '';
+    var vEdad = 0;
 
+    function mostAlert() {
+        vnombre = document.getElementById('nombre').value;
+        vedad = document.getElementById('edad').value;
+
+        alert(' Hola' + vnombre + ', tengo ' + vedad + ' anños.');
+    }
+</script>
 
 </html>
